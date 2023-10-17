@@ -1,0 +1,18 @@
+#include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
+
+using namespace sf;
+
+int main() {
+	Texture tfondo;
+	tfondo.loadFromFile("fondo.jpg");
+	Sprite sfondo;
+	sfondo.setTexture(tfondo);
+	sf::RenderWindow App(sf::VideoMode(800, 600, 32), "Ventana ejercicio 3 FONDO");
+	while (App.isOpen()) {
+		App.clear();
+		App.draw(sfondo);
+		App.display();
+	}
+	return 0;
+}
