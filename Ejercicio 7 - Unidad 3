@@ -1,0 +1,32 @@
+#include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
+
+using namespace sf;
+
+
+int main() {
+
+	Texture tcirculoRo, tcirculoAz;
+	Sprite scirculoRo, scirculoAz;
+
+	tcirculoRo.loadFromFile("rcircle.png");
+	scirculoRo.setTexture(tcirculoRo);
+	tcirculoAz.loadFromFile("bcircle.png");
+	scirculoAz.setTexture(tcirculoAz);
+	sf::RenderWindow App(sf::VideoMode(800, 600, 32), "Ventana ejercicio 7");
+	scirculoAz.setPosition(300, 200);
+	while (App.isOpen()) {
+		App.clear();
+		App.draw(scirculoAz);
+		scirculoRo.setPosition(0, 0);
+		App.draw(scirculoRo);
+		scirculoRo.setPosition(650, 0);
+		App.draw(scirculoRo);
+		scirculoRo.setPosition(0, 450);
+		App.draw(scirculoRo);
+		scirculoRo.setPosition(650, 450);
+		App.draw(scirculoRo);
+		App.display();
+	}
+	return 0;
+}
