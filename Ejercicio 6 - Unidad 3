@@ -22,18 +22,28 @@ int main() {
 	sfondoAz.setTexture(tfondoAz);
 	sfondoNe.setTexture(tfondoNe);
 	//--Seteamos posiciones
-	sfondoRo.setPosition(0, 0); 
-	sfondoAm.setPosition(0, 500);
-	sfondoAz.setPosition(500, 0);
-	sfondoNe.setPosition(500, 500);
-
+	sfondoRo.setPosition(150, 150); 
+	sfondoAm.setPosition(405, 150);
+	sfondoAz.setPosition(150, 405);
+	sfondoNe.setPosition(405, 405);
+	//escalamos tamaños
 	altoamari = (float)tfondoAm.getSize().y;
 	altorojo = (float)tfondoRo.getSize().y;
 	anchoamari = (float)tfondoAm.getSize().x;
 	anchorojo = (float)tfondoRo.getSize().x;
+	altoazu = (float)tfondoAz.getSize().y;
+	altoneg = (float)tfondoNe.getSize().y;
+	anchoazu = (float)tfondoAz.getSize().x;
+	anchoneg = (float)tfondoNe.getSize().x;
 	escalaY = altorojo / altoamari; escalaX =
 		anchorojo / anchoamari;
 	sfondoAm.setScale(escalaX, escalaY);
+	escalaY = altorojo / altoazu; escalaX =
+		anchorojo / anchoazu;
+	sfondoAz.setScale(escalaX, escalaY);
+	escalaY = altorojo / altoneg; escalaX =
+		anchorojo / anchoneg;
+	sfondoNe.setScale(escalaX, escalaY);
 
 
 	sf::RenderWindow App(sf::VideoMode(800, 800, 32), "Ventana ejercicio 6 CUADRADOS");
@@ -41,9 +51,8 @@ int main() {
 		App.clear();
 		App.draw(sfondoRo);
 		App.draw(sfondoAm);
-		//App.draw(sfondoAz);
-		//App.draw(sfondoNe);
+		App.draw(sfondoAz);
+		App.draw(sfondoNe);
 		App.display();
 	}
 	return 0;
-}
