@@ -1,0 +1,21 @@
+#include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
+
+using namespace sf;
+
+int main() {
+	Texture tfondo;
+	tfondo.loadFromFile("chessw.png");
+	Sprite sfondo;
+	sfondo.setTexture(tfondo);
+	sfondo.setPosition(400, 300);
+	sfondo.setRotation(0);
+	sf::RenderWindow App(sf::VideoMode(800, 600, 32), "Ventana ejercicio 5 ROTACION");
+	while (App.isOpen()) {
+		App.clear();
+		sfondo.rotate(1);
+		App.draw(sfondo);
+		App.display();
+	}
+	return 0;
+}
