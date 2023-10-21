@@ -1,2 +1,2 @@
 # Models-and-algorithms-1-
-Examples, hands on, works related to the assignature 
+Ejercicios relacionados a la materia
