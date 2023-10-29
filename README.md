@@ -5,3 +5,5 @@ Ejercicios relacionados a la materia.
 
 En primer lugar los ejercicios de la Unidad fueron subidos como archivos independientes, copiando y pegando el código de VS, lo cual no les funcionaría al intentar correrlos en su pc.
 Por esto, se han subido nuevamente pero comprimiendo el directorio completo de cada ejercicio para que pueda descargarse y ejecutarse, sin necesidad de cambiar nada. 
+
+# Ejercicios de la unidad 4 se suben a partir de la fecha 29/10/23
